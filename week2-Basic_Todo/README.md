@@ -11,10 +11,10 @@
 
 ## Homework Completion Status
 
-- [x ] **Duy**
+- [x] **Duy**
 - [ ] **Huy**
 - [ ] **Kiet**
 - [ ] **Long**
 - [ ] **Truong**
 - [ ] **H.Nhan**
-- [x ] **P.Nhan**
+- [x] **P.Nhan**
