@@ -1,4 +1,3 @@
-
 # Week4 - ASSIGNMENT :100: :100: :100:
 
 ## PROMPT :speech_balloon:
@@ -18,6 +17,7 @@
  > - [Note]:
 ---
 ## Homework Completion Status :bicyclist:
+on Status
 
 - [ ] **Duy**
 - [ ] **Huy**
