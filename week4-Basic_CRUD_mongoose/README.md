@@ -8,8 +8,6 @@
  > Provider: MongoDB
  > Connection string: [Your beatiful link](your-connection-stringhere)
 ---
-
-### Endpoints :envelope_with_arrow:
  > [!NOTE]
  > - Endpoint: /users 
  > - Available methods: PUT, POST, GET, GET(id), DELETE
