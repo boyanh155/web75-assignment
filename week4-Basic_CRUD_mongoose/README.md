@@ -8,7 +8,7 @@
  > - Provider: MongoDB \
  > - Connection string: [Your beatiful link](your-connection-stringhere)
 ---
-### Endpoint
+### Endpoint :electric_plug:
  > [Endpoint]: /users  
  > - [Available methods]: PUT, POST, GET, GET(id), DELETE
  > - [Note]: Em cho em ho cua em em di kham banh nen chua thieu DELETE
