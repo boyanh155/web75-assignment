@@ -5,17 +5,17 @@
 
 
 ### Database
- > Provider: MongoDB
- > Connection string: [your connection string]
+ > [Provider]: MongoDB
+ > [Connection string]: [your connection string]
 
 ### Endpoint
- >  Endpoint: /users  
- > > Available methods: PUT, POST, GET, GET(id), DELETE
- > > Note: Em cho em ho cua em em di kham banh nen chua thieu DELETE
+ > [Endpoint]: /users  
+ > > [Available methods]: PUT, POST, GET, GET(id), DELETE
+ > > [Note]: Em cho em ho cua em em di kham banh nen chua thieu DELETE
 
- > Endpoint: /posts
- > > Available methods: PUT, POST, GET, GET(id), DELETE
- > > Note:
+ > [Endpoint]: /posts
+ > > [Available] methods: PUT, POST, GET, GET(id), DELETE
+ > > [Note]:
 
 
 ## Homework Completion Status
