@@ -10,12 +10,12 @@
 ---
 ### Endpoint
  > [Endpoint]: /users  
- > > [Available methods]: PUT, POST, GET, GET(id), DELETE
- > > [Note]: Em cho em ho cua em em di kham banh nen chua thieu DELETE
+ > - [Available methods]: PUT, POST, GET, GET(id), DELETE
+ > - [Note]: Em cho em ho cua em em di kham banh nen chua thieu DELETE
 
  > [Endpoint]: /posts
- > > [Available] methods: PUT, POST, GET, GET(id), DELETE
- > > [Note]:
+ > - [Available] methods: PUT, POST, GET, GET(id), DELETE
+ > - [Note]:
 ---
 ## Homework Completion Status :bicyclist:
 
