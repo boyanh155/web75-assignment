@@ -10,15 +10,16 @@
 ---
 
 ### Endpoints :envelope_with_arrow:
- ** Endpoint: /users **
-> [!NOTE]
- > - [Available methods]: PUT, POST, GET, GET(id), DELETE
- > - [Note]: Em cho em ho cua em em di kham banh nen chua thieu DELETE
+ > [!NOTE]
+ > - Endpoint: /users 
+ > - Available methods: PUT, POST, GET, GET(id), DELETE
+ > - Note: Em cho em ho cua em em di kham banh nen chua thieu DELETE
 
  ** Endpoint: /posts  ** 
-> [!NOTE]
- > - [Available] methods: PUT, POST, GET, GET(id), DELETE
- > - [Note]:
+ > [!NOTE]
+ > - Endpoint: /posts 
+ > - Available methods: PUT, POST, GET, GET(id), DELETE
+ > - Note:
 ---
 
 ## Homework Completion Status :bicyclist:
