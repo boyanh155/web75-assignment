@@ -8,18 +8,15 @@
  > Provider: MongoDB
  > Connection string: [Your beatiful link](your-connection-stringhere)
 ---
- > [!NOTE]
- > - Endpoint: /users 
- > - Available methods: PUT, POST, GET, GET(id), DELETE
- > - Note: Em cho em ho cua em em di kham banh nen chua thieu DELETE
+### Endpoint
+ > [Endpoint]: /users  
+ > > [Available methods]: PUT, POST, GET, GET(id), DELETE
+ > > [Note]: Em cho em ho cua em em di kham banh nen chua thieu DELETE
 
- ** Endpoint: /posts  ** 
- > [!NOTE]
- > - Endpoint: /posts 
- > - Available methods: PUT, POST, GET, GET(id), DELETE
- > - Note:
+ > [Endpoint]: /posts
+ > > [Available] methods: PUT, POST, GET, GET(id), DELETE
+ > > [Note]:
 ---
-
 ## Homework Completion Status :bicyclist:
 
 - [ ] **Duy**
