@@ -5,8 +5,8 @@
  > - Create express server which has 5 endpoints includes: PUT, POST, GET, GET(id), DELETE to interact with a/an users/posts collections in your database which was provided by MongoDB.
 ---
 ### Database :page_facing_up:
- > Provider: MongoDB \
- > Connection string: [Your beatiful link](your-connection-stringhere)
+ > - Provider: MongoDB \
+ > - Connection string: [Your beatiful link](your-connection-stringhere)
 ---
 ### Endpoint
  > [Endpoint]: /users  
