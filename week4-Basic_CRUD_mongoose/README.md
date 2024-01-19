@@ -25,4 +25,4 @@ on Status
 - [ ] **Long**
 - [ ] **Truong**
 - [ ] **H.Nhan**
-- [ ] **P.Nhan**
+- [x] **P.Nhan**
