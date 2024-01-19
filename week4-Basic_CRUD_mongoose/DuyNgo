@@ -1,0 +1,162 @@
+import express from 'express';
+import mongoose from 'mongoose';
+import Collection from './collection.js'
+
+const server = express();
+
+// Connect to Mongoose server
+mongoose.connect(`mongodb+srv://baoduyd17:BaoDuy%402010@cluster0.n4ddvre.mongodb.net/`)
+
+//middleware 
+server.use(express.json());
+const db = mongoose.connection;
+db.on('error', error => console.log(error));
+db.once('open', () => console.log("Connected to Mongoose server"));
+
+
+/*
+ * Create schema for document
+ * UserSchema, PostSchema
+ */
+const UserSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    password: String
+})
+
+const PostSchema = new mongoose.Schema({
+    title: String,
+    content: String,
+    author: {
+                type: mongoose.Schema.Types.ObjectId,
+            ref: 'User'
+            }
+})  
+
+//Create model for document
+const User = mongoose.model(Collection.USERS, UserSchema)
+const Post = mongoose.model(Collection.POST, PostSchema)
+
+//Create Endpoint Users
+server.post('/users', async(req, res) => {
+    const {name, email, password} = req.body
+    try {
+        if(!password) throw {
+            status: 401,
+            message: 'Missing or invalid password',
+            success: false
+        }
+        if(!email) throw {
+            status: 401,
+            message: 'Missing or invalid email',
+            success: false
+        }
+        if(!name) throw {
+            status: 401,
+            message: 'Missing Name',
+            success: false
+        }
+
+        const newUser = new User(req.body);
+        const saveUser = await newUser.save();
+        res.json({
+            data: saveUser,
+            message:"send successfully",
+            success: true}); 
+    } catch (error) {
+        console.log(error.message)
+        res.status(error.status || 500).send(error.message || "server error");
+    }
+})
+
+server.get('/users',async (req,res)=>{
+    const users = await User.find({})
+    res.send({
+        data: users,
+        message:"success",
+        success: true
+    })
+})
+
+server.get('/users/:id',async (req,res)=>{
+    const users = await User.find({_id : req.params.id})
+    res.json(users)
+})
+
+server.delete('/users/:id',async (req,res)=>{
+    await User.findOneAndDelete({_id : req.params.id})
+    res.json({
+        message:   "Deleted successfully",
+        success: true
+    })
+})
+
+server.put('/users/:id',async (req,res)=>{
+    const data = req.body
+    await User.findOneAndUpdate({_id:req.params.id}, data )
+    res.json({
+        message:   "Updata successfully",
+        success: true
+    })
+})
+
+//Create Endpoint Posts
+server.post('/posts'), async (req,res)=>{
+    try {
+        const newPost = new Post(req.body)
+        const savePost = await newPost.save();
+        res.send(savePost);
+    } catch (error) {
+        res.status(500).send("Internal Server Error")
+    }
+}
+
+server.get('/posts', async (req,res)=>{
+    const data = await Post.find({}).populate('author');
+    res.send({
+        data,
+        message: 'success',
+        success: true
+    })
+})
+
+server.get('/posts/:id', async (req, res)=>{
+    const dataId = Post.findById(req.params.id).populate('author');
+    res.send({
+        data: dataId,
+        success: true
+    })
+})
+
+server.delete('/posts/:id', async(req, res) => {
+    try {
+        const currentUser = await Post.findById({_id:req.params.id})
+        if(!currentUser) throw {
+            message: 'User not found',
+            status: 402
+        }
+        await Post.findByIdAndDelete(req.params.id)
+        res.status(200).send('Delete user successfully')
+    } catch (error) {
+        res.status(error.status|| 500 ).send(error.message || "internal server error")
+    }
+})
+
+server.put('/posts/:id', async (req, res) => {
+    try{
+        const currentUser = await Post.findById({_id: req.params.id});
+        if(!currentUser) throw{
+            messages: "User not found",
+            status: 402
+        }
+        await Post.findByIdAndUpdate({_id: req.params.id}, req.body)
+    }
+    catch(err){
+        console.log(err)
+        res.status(err.status || 500).send(err.message || "internal server error")
+    }
+})
+
+server.listen(3000, () => {
+    console.log('listening on port 3000');
+})
