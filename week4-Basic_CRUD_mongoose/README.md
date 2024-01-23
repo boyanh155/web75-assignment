@@ -19,7 +19,7 @@
 ## Homework Completion Status :bicyclist:
 on Status
 
-- [ ] **Duy**
+- [x] **Duy**
 - [ ] **Huy**
 - [ ] **Kiet**
 - [ ] **Long**
